@@ -1,0 +1,15 @@
+DROP ROLE IF EXISTS;
+
+CREATE ROLE springstudent
+	SUPERUSER
+	CREATEDB
+	CREATEROLE
+	LOGIN
+	PASSWORD 'springstudent'
+;
+
+DROP DATABASE IF EXISTS web_customer_tracker;
+
+CREATE DATABASE web_customer_tracker;
+
+CREATE SCHEMA IF NOT EXISTS wct AUTHORIZATION springstudent;
